@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>CANVAS</title>
+        <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #startScreen {
+            position: fixed;
+            inset: 0;
+            background: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            z-index: 10;
+        }
+
+        #sliceInstruction {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            color: white;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        #resetButton {
+            position: fixed;
+            top: 50px;
+            left: 20px;
+            z-index: 5;
+        }
+</style>
+    </head>
+
+    <body onload="main()">
+        
+        <div id="startScreen">
+            <h1>Geometry Slicer</h1>
+            <p>Press Enter to Start</p>
+        </div>
+        <p id="sliceInstruction">
+            Drag over the model to slice it.
+        </p>
+        <button id="resetButton">Reset</button>
+        <canvas id="amc" width="800" height="600">
+            This browser does not support html canvas element
+        </canvas>
+        <!-- script -->
+        <script src="assimpjs.js"></script>
+        <script type="module" src="/Canvas.ts"></script>
+    </body>
+</html>
