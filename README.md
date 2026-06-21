@@ -24,14 +24,14 @@
 
 - **Geometry Slicing Approach:**  
 
-  -Drag over the model/object to slice using mouse.
-  -Mouse start and end pts are used to calculate cutting plane.
-  -We need to convert drag direction from screen space into world space.
-  -For that first mouse pts are converted to NDC (Normalized Device Coordinates).
-  -Using NDC pts raydirection is calculated using camera right, camera up, camera forward vectors.
-  -Ray distance is calculated using modelWorldPosition,camera pos and dot(rayDirection, cameraForward).
-  -Finally point on plane is calculated using camerapos, raydirection and raydistance.
-  -plane normal is calculated as cross(dragDirectionWorld, cameraForward)
+  - Drag over the model/object to slice using mouse.
+  - Mouse start and end pts are used to calculate cutting plane.
+  - We need to convert drag direction from screen space into world space.
+  - For that first mouse pts are converted to NDC (Normalized Device Coordinates).
+  - Using NDC pts raydirection is calculated using camera right, camera up, camera forward vectors.
+  - Ray distance is calculated using modelWorldPosition,camera pos and dot(rayDirection, cameraForward).
+  - Finally point on plane is calculated using camerapos, raydirection and raydistance.
+  - plane normal is calculated as cross(dragDirectionWorld, cameraForward)
   - Each triangle of the mesh is clipped against the cutting plane to produce two output meshes.
   - The signed distance of every vertex from the cutting plane is computed using the 
     vec3.subtract(difference, vertex.position, planePoint);
