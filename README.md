@@ -1,5 +1,7 @@
 # Geometry Slicer
 
+🔗 **Live Demo:** https://geometry-slicer-zeta.vercel.app/
+
 <img src="image.png" width="700">
 
 ## Technical Details
